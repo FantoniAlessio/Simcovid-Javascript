@@ -1,1 +1,2 @@
 # Simcovid-Javascript
+modifica
