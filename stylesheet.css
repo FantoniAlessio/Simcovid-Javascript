@@ -1,4 +1,18 @@
-p1{
-    color:blue;
-    font-style: italic;
+#title {
+	text-align: center;
+}
+
+.left {
+  width: 25%;
+  background-color: red;
+}
+
+.center {
+  width: 50%;
+  background-color: green;
+}
+
+.right {
+  width: 25%;
+  background-color: blue;
 }

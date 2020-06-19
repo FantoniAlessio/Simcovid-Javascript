@@ -1,12 +1,12 @@
-flag = false;
-function test() {
-    if (flag===true){
-        document.getElementById("test").innerHTML = "4BIT-COVID_ICTFORMA";
-        flag=false;
-    }
-    else{
-        document.getElementById("test").innerHTML = "by Diego Namkhai";
-        flag=true;
-    }
-  
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  if (mouseIsPressed) {
+    fill(0);
+  } else {
+    fill(255);
+  }
+  ellipse(mouseX, mouseY, 80, 80);
 }
