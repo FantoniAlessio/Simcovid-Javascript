@@ -4,7 +4,7 @@ let data_D = [0]; // deceduti
 let labels_data = [0];
 let massPopChart, cnv;
 
-function setup(cnv) {
+function setup() {
   cnv = createCanvas(0.7*windowHeight, 0.7*windowHeight-20);
   cnv.position(windowWidth-(0.7*windowHeight)-15, 10);
 
@@ -151,7 +151,7 @@ function simulazione() {
 	/* GESTIONE DEL PULSANTE - FINE */
 	
 	// preleviamo il riferimento al canvas delle particelle
-	var canvas = cnv;
+	var canvas = cnv.canvas;
 	var ctx = canvas.getContext("2d");
 	
 	
@@ -363,7 +363,13 @@ function simulazione() {
 	disegnaPareti();
 	disegnaPallini();
 	muoviPallini();
-	
+
+	data_M.push(malati);
+	data_S.push(sani);
+	data_D.push(curati);
+
+	labels_data.push(frame)
+	massPopChart.update();
 	// controlliamo se l'animazione prosegue o meno
 	if( !stop ) idSimulazione = window.requestAnimationFrame(disegna);
 	console.log("id: " + idSimulazione );
