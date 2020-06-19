@@ -1,9 +1,17 @@
 <!doctype html>
 <html>
-    <head><title>COVID ICT-FORMA</title></head>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <head><title>COVID ICT-FORMA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>COVID ICT-FORMA</title>
+        <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
     <body>    
-        <script type="text/javascript" src="simulazione.js"></script>
+        <script src="COVID.js"></script>
         <div>
             Popolazione <input type="text" value="800" id="npallini" size="4">
             Malati iniziali <input type="text" value="1" id="nmalati" size="4">
@@ -11,7 +19,10 @@
             T. guarigione <input type="text" value="2000" id="tempoguarigione" size="4">
             <input type="button" value="INIZIA" id="inizia" onclick="simulazione()">
         </div>
-        <canvas id="particelle" width="800px" height="600px"></canvas>
+        
+        <div class="grafico">
+            <canvas id="myChart"></canvas>
+        </div>
         <div id="info"></div>
     </body>
 </html>
