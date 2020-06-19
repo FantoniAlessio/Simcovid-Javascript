@@ -26,19 +26,14 @@ function draw() {
   	data_D.push(0.5*i);
   	labels_data.push(i)
   	massPopChart.update();
-  	
-    fill(0);
-  } else {
-    fill(255);
   }
-  ellipse(mouseX, mouseY, 80, 80);
 }
 
 function windowResized(){
 	resizeCanvas(0.7*windowHeight, 0.7*windowHeight-20);
 	cnv.position(windowWidth-(0.7*windowHeight)-15, 10);
 
-	massPopChart.canvas.parentNode.style.height = str(0.7*windowHeight)+"px";
+	massPopChart.canvas.parentNode.style.height = str(0.98*windowHeight)+"px";
  	massPopChart.canvas.parentNode.style.width = str(windowWidth-(0.75*windowHeight))+"px";
 }
 
@@ -121,7 +116,7 @@ function draw_chart(){
       }
     });
 
-    massPopChart.canvas.parentNode.style.height = str(0.7*windowHeight)+"px";
+    massPopChart.canvas.parentNode.style.height = str(0.98*windowHeight)+"px";
  	massPopChart.canvas.parentNode.style.width = str(windowWidth-(0.75*windowHeight))+"px";
 }
  
