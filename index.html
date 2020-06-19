@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head><title>COVID ICT-FORMA</title></head>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <body>    
+        <script type="text/javascript" src="simulazione.js"></script>
+        <div>
+            Popolazione <input type="text" value="800" id="npallini" size="4">
+            Malati iniziali <input type="text" value="1" id="nmalati" size="4">
+            Fermi <input type="text" value="600" id="nfermi" size="4">
+            T. guarigione <input type="text" value="2000" id="tempoguarigione" size="4">
+            <input type="button" value="INIZIA" id="inizia" onclick="simulazione()">
+        </div>
+        <canvas id="particelle" width="800px" height="600px"></canvas>
+        <div id="info"></div>
+    </body>
+</html>
